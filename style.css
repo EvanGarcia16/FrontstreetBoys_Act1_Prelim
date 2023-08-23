@@ -695,6 +695,118 @@ section .cards {
     margin-bottom: 20px;
   }
   }
+
+/* Sevices Section */
+
+.services
+{
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	place-items: center; 
+  
+}
+.row 
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+.column 
+{
+	width: 100%;
+	padding: 0 1em 1em 1em;
+	text-align: center;
+}
+.card {
+	border: 1px solid #b8c6db;
+	width: 100%;
+	height: 100%;
+	padding: 2em 1.5em;
+	background: linear-gradient(#ffffff 50%, #0f2043 50%);
+	background-size: 100% 200%;
+	background-position: 0 2.5%;
+	border-radius: 5px;
+	box-sizing: 0 0 35px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.row h2
+{
+	font-size: 50px;
+}
+.column h3
+{
+	font-size: 20px;
+	font-weight: 600;
+	color: #1f194c;
+	margin: 1em 0;
+}
+.column p 
+{
+	color: #575a7b;
+	font-size: 15px;
+	line-height: 1.6;
+	letter-spacing: 0.03em;
+}
+.icon-wrapper 
+{
+	background-color: #0f2043;
+	position: relative;
+	margin: auto;
+	font-size: 30px;
+	height: 2.5em;
+	width: 2.5em;
+	color: #b8c6db;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	transform: 0.5s;
+}
+.icon-wrapper i {
+    font-size: 50px;
+}
+.card:hover
+{
+	background-position: 0 100%;
+}
+.card:hover .icon-wrapper
+{
+	background-color: #b8c6db;
+	color: #0f2043;
+}
+.card:hover h3
+{
+	color: #b8c6db;
+}
+.card:hover p 
+{
+	color: #f0f0f0;
+}
+@media screen and  (min-width: 768px)
+{
+	.services 
+	{
+		padding: 0 2em;
+	}
+	.column {
+		flex: 0 50%;
+		max-width: 50%;
+	}
+}
+@media screen and (min-width: 992px)
+{
+	.services 
+	{
+		padding: 1em 3em;
+	}
+	.column 
+	{
+		flex: 0 0 33.33%;
+		max-width: 33.33%;
+	}
+}
+  
    /* Our Team media */
    @media (max-width: 1240px) {
     .team {
@@ -760,6 +872,178 @@ section .cards {
     max-height: 100%;
   }
 }
+
+/* Frequently Asked Questions */
+.faqs 
+{
+	/*background: url('img/hero-image.jpg') center/cover; */
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
+}
+
+.faqs h1
+{
+	color: #0f2043;
+	font-size: 40px;
+	padding: 0 10px 21px;
+}
+@media (max-width: 768px) {
+    .faqs h1 {
+        font-size: 32px;
+        padding: 0 10px 15px;
+    }
+}
+@media (max-width: 480px) {
+    .faqs h1 {
+        font-size: 24px;
+        padding: 0 10px 10px;
+    }
+}
+.faqs .tab
+{
+	
+	position: relative;
+	background-color: #b8c6db;
+	padding: 0 20px 20px;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	overflow: hidden;
+	max-width: 80%;
+	font-size: 1em;
+	margin-right: 5px;
+	margin: 0 auto;
+}
+@media (max-width: 768px) {
+	.faqs .tab {
+        width: 90%; 
+        padding: 0 5px 5px; 
+    }
+}
+@media (max-width: 480px) {
+    .faqs .tab {
+        width: 95%; 
+        padding: 0 5px 5px;
+    }
+}
+.faqs .tab input
+{
+	appearance: none;
+	
+}
+.faqs .tab label
+{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	
+} 
+.faqs .tab label::after
+{
+	content: '+';
+	position: absolute;
+	right: 10px;
+	font-size: 1.5em;
+	color: rgba(0, 0, 0, 0.1);
+	transition: transform 1s;
+}
+.faqs .tab:hover label::after
+{
+	color: #FDDB5B;
+}
+.faqs .tab input:checked ~ label::after
+{
+	transform: rotate(135deg);
+	color: #fff;
+
+}
+.faqs .tab label h2
+{
+	width: 40px;
+	height: 40px;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1.25em;
+	border-radius: 5px;
+	margin-right: 10px;
+	min-width: 40px;
+}
+.faqs .tab input:checked ~ label h2
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: rgba(255, 255 ,255, 0.2);
+	font-size: 8em;
+	justify-content: flex-end;
+	padding: 20px;
+
+}
+
+.faqs .tab:nth-child(2) label h2
+{
+	background: #0f2043;
+}
+.faqs .tab:nth-child(3) label h2
+{
+	background: #0f2043;
+}
+.faqs .tab:nth-child(4) label h2
+{
+	background: #0f2043;
+}
+.faqs .tab:nth-child(5) label h2
+{
+	background: #0f2043;
+}
+
+.faqs .tab label h3
+{
+	position: relative;
+	font-weight: 500;
+	color: #fff;
+	z-index: 10;
+	font-weight: bold;
+}
+.faqs .tab input:checked ~ label h3
+{
+	padding: 2px 10px;
+	color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 5px rgba(0, 0, 0, 0.05);
+	
+}
+.faqs .tab .content
+{
+	max-height: 0;
+	transition: 1s;
+	overflow: hidden;	
+}
+.faqs .tab input:checked ~ .content
+{
+	max-height: 100vh;
+}
+.faqs .tab .content p
+{
+	position: relative;
+	padding: 10px 0;
+	color: #0f2043;
+	z-index: 10;
+}
+.faqs .tab input:checked ~ .content p
+{
+	color: #fff;
+}
+  
  /*footer media*/
 @media (max-width: 600px) {
     .wrapper {
